@@ -6,11 +6,15 @@ const ladoCuadrado = 5;
 function getPerimetroCuadrado(ladoCuadrado) {
   return ladoCuadrado * 4;
 }
+
 function calcularPerimetroCuadrado() {
   const input = document.getElementById('ImputCuadrado');
   const ladoCuadrado = input.value;
-  return ladoCuadrado * 4;
+  const perimetroCuadrado = getPerimetroCuadrado(ladoCuadrado);
+
+  alert(`El perimetro del cuadrado es de: ${perimetroCuadrado}`);
 }
+
 console.log(
   'El perimetro del cuadrado es de: ' +
     getPerimetroCuadrado(ladoCuadrado) +
@@ -20,13 +24,17 @@ console.log(
 function getAreaCuadrado(ladoCuadrado) {
   return ladoCuadrado * ladoCuadrado;
 }
+
 function calcularAreaCuadrado() {
   const input = document.getElementById('ImputCuadrado');
   const ladoCuadrado = input.value;
-  return ladoCuadrado * ladoCuadrado;
+  const areaCuadrado = getAreaCuadrado(ladoCuadrado);
+
+  alert(`El área del cuadrado es de:  ${areaCuadrado}`);
 }
+
 console.log(
-  'El lado área del cuadrado es de: ' + getAreaCuadrado(ladoCuadrado) + 'cm^2'
+  'El área del cuadrado es de: ' + getAreaCuadrado(ladoCuadrado) + 'cm^2'
 );
 
 console.groupEnd();
