@@ -16,10 +16,40 @@
   <section>
     <h2>Calcula el área y perímetro de un cuadrado</h2>
     <form>
-      <label for="ImputCuadrado">Escribe cuanto mide el lado del cuadrado? (cm)</label>
-      <input id="ImputCuadrado" type="number" />
+      <label for="ladoCuadrado">Escribe cuanto mide el lado del cuadrado (cm)</label>
+      <input id="ladoCuadrado" type="number" />
       <button type="button" onclick="calcularPerimetroCuadrado()" >Calcular Perímetro</button>
       <button type="button" onclick="calcularAreaCuadrado()">Calcular Área</button>
+    </form>
+  </section>
+  <section>
+    <h2>Calcula el área y perímetro de un triangulo</h2>
+    <form>
+      <label for="ladoATriangulo">Escribe cuanto mide el lado A del triangulo (cm)</label>
+      <input id="ladoATriangulo" type="number" />
+
+      <label for="ladoBTriangulo">Escribe cuanto mide el lado B del triangulo (cm)</label>
+      <input id="ladoBTriangulo" type="number" />
+
+      <label for="baseTriangulo">Escribe cuanto mide la base del triangulo (cm)</label>
+      <input id="baseTriangulo" type="number" />
+
+      <label for="alturaTriangulo">Escribe cuanto mide la altura del triangulo (cm)</label>
+      <input id="alturaTriangulo" type="number" />
+
+      <button type="button" onclick="calcularPerimetroTriangulo()" >Calcular Perímetro</button>
+      <button type="button" onclick="calcularAreaTriangulo()">Calcular Área</button>
+    </form>
+  </section>
+  <section>
+    <h2>Calcula el área y perímetro de un circulo</h2>
+    <form>
+      <label for="radioCirculo">Escribe cuanto mide el radio del circulo (cm)</label>
+      <input id="radioCirculo" type="number" />
+
+      <button type="button" onclick="calcularDiametroCirculo()" >Calcular Diametro</button>
+      <button type="button" onclick="calcularPerimetroCirculo()" >Calcular Perímetro</button>
+      <button type="button" onclick="calcularAreaCirculo()">Calcular Área</button>
     </form>
   </section>
   <script src="./figuras.js"></script>
