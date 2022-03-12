@@ -99,6 +99,38 @@ function calcularAreaTriangulo() {
   alert(`El área del triangulo es de: ${areaTriangulo} cm^2`);
 }
 
+function getAlturaTrianguloIsoceles(ladoATriangulo, baseTriangulo) {
+  const aCuadrado = Math.pow(ladoATriangulo, 2);
+  const bCuartosCuadrado = Math.pow(baseTriangulo / 4, 2);
+  const alturaTrianguloIsoceles = Math.sqrt(aCuadrado - bCuartosCuadrado);
+
+  return alturaTrianguloIsoceles;
+}
+
+function calcularAlturaTrianguloIsoceless() {
+  const inputLadoATriangulo = document.getElementById('ladoATriangulo');
+  const inputLadoBTriangulo = document.getElementById('ladoBTriangulo');
+  const inputBaseTriangulo = document.getElementById('baseTriangulo');
+
+  const ladoATriangulo = inputLadoATriangulo.value;
+  const ladoBTriangulo = inputLadoBTriangulo.value;
+  const baseTriangulo = inputBaseTriangulo.value;
+
+  const isIsoceles =
+    Number(ladoATriangulo) === Number(ladoBTriangulo) ? true : false;
+  if (isIsoceles) {
+    const alturaTrianguloIsoceles = getAlturaTrianguloIsoceles(
+      ladoATriangulo,
+      baseTriangulo
+    );
+    alert(
+      `El tríangulo es isóceles y su altura es: ${alturaTrianguloIsoceles}`
+    );
+  } else {
+    alert(`El triangulo NO es Isóceles`);
+  }
+}
+
 console.log(
   'El área del triangulo es de: ' +
     getAreaTriangulo(baseTriangulo, alturaTriangulo) +
