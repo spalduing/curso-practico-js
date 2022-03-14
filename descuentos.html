@@ -16,13 +16,37 @@
     <section>
         <h2>Calcula el precio a pagar de tus productos con descuento</h2>
         <form>
-            <label for="precioProducto">Ingrese el precio de su producto</label>
-            <input id="precioProducto" type="number" />
-            
-            <label for="descuentoProducto" >Ingrese el descuento de su producto</label>
-            <input id="descuentoProducto" type="number" />
+            <section>
 
-            <button type="button" onclick="calcularPrecioConDescuento()" >Calcular descuento</button>
+                <label for="precioProducto">Ingrese el precio de su producto</label>
+                <input id="precioProducto" type="number" />
+                
+                <label for="descuentoProducto" >Ingrese el descuento de su producto</label>
+                <input id="descuentoProducto" type="number" />
+                <button type="button" onclick="calcularPrecioConDescuento()" >Calcular descuento</button>
+            </section>
+
+            <section>
+                <label for="descuentoProducto" >Tus cupones: </label>
+                <div>
+                    <input type="radio" id="mercadona" name="discount" value="mercadona"
+                           checked>
+                    <label for="mercadona">Mecadona: -20%</label>
+                  </div>
+                  
+                  <div>
+                    <input type="radio" id="superinter" name="discount" value="superinter">
+                    <label for="superinter">SuperInter: -40%</label>
+                  </div>
+                  
+                  <div>
+                    <input type="radio" id="exito" name="discount" value="exito">
+                    <label for="exito">Exito: -10%</label>
+                  </div>
+                  <button type="button" onclick="calcularPrecioConDescuentoCupon()" >Calcular descuento cupones</button>
+            </section>
+
+
 
             <p id="precioFinal" ></p>
         </form>
