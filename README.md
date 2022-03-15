@@ -24,3 +24,19 @@
         ----------------------------------------
         PRECIO_FINCAL = [ P * (100 - D)] / 100
         ----------------------------------------
+
+## Taller #3: Promedio, Media y Moda.
+
+- Primer paso: Definir las fórmulas.
+- Segundo paso: Implementar las fórmulas en javascript.
+- Tercer paso: Crear funciones.
+- Cuarto paso: Integar javascript con html.
+
+PROMEDIO:
+
+n: NUMERO DE ITEMS
+I: ITEM
+
+    ----------------------------------------------------------
+    PROMEDIO = [ I(1) + I(2) + I(3) + I(4) + ... I(n) ] / n
+    ----------------------------------------------------------
