@@ -25,7 +25,7 @@
         PRECIO_FINCAL = [ P * (100 - D)] / 100
         ----------------------------------------
 
-## Taller #3: Promedio, Media y Moda.
+## Taller #3: Promedio, Mediana y Moda.
 
 - Primer paso: Definir las fórmulas.
 - Segundo paso: Implementar las fórmulas en javascript.
@@ -40,3 +40,22 @@ I: ITEM
     ----------------------------------------------------------
     PROMEDIO = [ I(1) + I(2) + I(3) + I(4) + ... I(n) ] / n
     ----------------------------------------------------------
+
+MEDIANA:
+n: NUMERO DE ITEMS
+I: ITEM
+CASO 1: 'n' es par
+
+    n = 4
+
+    { I(1), [I(2), I(3)], I(4)}
+
+    MEDIANA =  I(2), I(3) / 2
+
+CASO 2: 'n' es inpar
+
+    n = 3
+
+    { I(1), [I(2)], I(3)}
+
+    MEDIANA =  I(2)
