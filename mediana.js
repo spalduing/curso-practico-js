@@ -1,5 +1,9 @@
-const lista1 = [1, 2, 3, 4];
-const lista2 = [0, 1, 2, 3, 4, 5, 6];
+let lista1 = [1, 2, 3, 4];
+let lista2 = [0, 1, 2, 3, 4, 5, 6];
+
+// https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Global_Objects/Array/sort
+lista1 = lista1.sort((a, b) => a - b);
+lista2 = lista2.sort((a, b) => a - b);
 
 let isEven = (lista1.length | 1) !== lista1.length ? true : false;
 let isOdd = (lista2.length | 1) === lista2.length ? true : false;
