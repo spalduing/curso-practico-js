@@ -1,15 +1,29 @@
-const lista1 = [1, 2, 3, 4];
+const array = [];
 
-let sumaLista1 = 0;
+function llenarLista() {
+  const numberFiled = document.getElementById('numField');
+  const number = Number(numberFiled.value);
 
-console.group('sumaListaFor');
-for (let i = 0; i < lista1.length; i++) {
-  sumaLista1 = sumaLista1 + lista1[i];
-  console.log(sumaLista1);
+  array.push(number);
+  const message = `La lista de números es: ${array}`;
+
+  const precioFinalParagraph = document.getElementById('numberArray');
+  precioFinalParagraph.innerText = message;
 }
-console.groupEnd();
 
-console.group('promedio');
-const promedio = sumaLista1 / lista1.length;
-console.log(promedio);
-console.groupEnd();
+function calcularPromedio() {
+  let sumaArray = 0;
+
+  for (let i = 0; i < array.length; i++) {
+    sumaArray = sumaArray + array[i];
+  }
+
+  const promedio = sumaArray / array.length;
+
+  const message = `El promedio es: ${promedio}`;
+
+  const precioFinalParagraph = document.getElementById('mean');
+  precioFinalParagraph.innerText = message;
+
+  return promedio;
+}

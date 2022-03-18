@@ -9,6 +9,20 @@
 <body>
     <header><h1>Promedio</h1></header>
 
+    <section>
+        <label for="numField" >Ingrese un numero a la lista</label>
+        <input id="numField" type="number" />
+
+        <button id="insertNum" onclick="llenarLista()">Llenar lista</button>
+
+        <p id="numberArray" ></p>
+        
+        <button id="calculateMean" onclick="calcularPromedio()" >Calcular Promedio</button>
+
+        <p id="mean" ></p>
+    </section>
+    
+
     <script src="./promedio.js"></script>
 </body>
 </html>
