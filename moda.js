@@ -1,22 +1,35 @@
-const lista = [1, 3, 4, 5, 6, 7, 8, 9, 3, 4, 5, 3, 2, 4, 3, 3, 6, 7];
+const list = [];
 
-let elementosRepetidos = {};
+function fillList() {
+  const listParagraph = document.getElementById('list');
+  const elementField = document.getElementById('elementField');
 
-console.group('Moda');
-lista.map((elemento, i) => {
-  if (elementosRepetidos[elemento]) {
-    elementosRepetidos[elemento] += 1;
-  } else {
-    elementosRepetidos[elemento] = 1;
-  }
-});
+  const elementValue = elementField.value;
+  list.push(elementValue);
 
-const arrayElementosRepetidos = Object.entries(elementosRepetidos).sort(
-  (a, b) => a[1] - b[1]
-);
+  listParagraph.innerText = `The list of numbers is: ${list}`;
+}
 
-const lastIndex = arrayElementosRepetidos.length - 1;
-console.log('arrayElementosRepetidos: ', arrayElementosRepetidos);
-console.log('moda: ', arrayElementosRepetidos[lastIndex]);
+function getMode() {
+  const modeParagraph = document.getElementById('mode');
 
-console.groupEnd();
+  let elementosRepetidos = {};
+
+  console.group('Moda');
+  list.map((elemento, i) => {
+    if (elementosRepetidos[elemento]) {
+      elementosRepetidos[elemento] += 1;
+    } else {
+      elementosRepetidos[elemento] = 1;
+    }
+  });
+
+  const arrayElementosRepetidos = Object.entries(elementosRepetidos).sort(
+    (a, b) => a[1] - b[1]
+  );
+
+  const lastIndex = arrayElementosRepetidos.length - 1;
+
+  modeParagraph.innerText = `La moda es: '${arrayElementosRepetidos[lastIndex][0]}'
+                               Numero de veces que se repite el elemento: '${arrayElementosRepetidos[lastIndex][1]}'`;
+}
